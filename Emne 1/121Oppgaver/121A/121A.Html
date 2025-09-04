@@ -1,0 +1,38 @@
+<button onclick="addCircle()">Sirkel</button>
+<button onclick="addRectangular()">Firkant</button>
+<input id="changeValueX" type="number" />
+<input id="changeValueY" type="number" />
+<input id="backgroundColor" type="text">
+
+<select id="backgroundColors">
+  <option value="green">Green</option>
+  <option value="lightblue">Light Blue</option>
+  <option value="lightgreen">Light Green</option>
+  <option value="lightcoral">Light Coral</option>
+</select>
+<br />
+
+<svg id="mySvg" width="800" height="600" style="background-color: lightgray;">
+</svg>
+
+<script>
+  let x = 0;
+  function addCircle() {
+    bColor = document.getElementById('backgroundColors').value;
+    cx = document.getElementById('changeValueX').value;
+    cy = document.getElementById('changeValueY').value;
+    document.getElementById('mySvg').innerHTML = /*HTML*/`
+          <circle cx="${cx}" cy="${cy}" r="40" stroke="green" stroke-width="4" fill="${bColor}" />            
+      `;
+  }
+
+  function addRectangular() {
+    bColor = document.getElementById('backgroundColors').value;
+    x = document.getElementById('changeValueX').value;
+    y = document.getElementById('changeValueY').value;
+    document.getElementById('mySvg').innerHTML = /*HTML*/`
+          <rect x="${x}" y="${y}" width="40" height="40" stroke="green" stroke-width="4" fill="${bColor}" />            
+      `;
+
+  };
+</script>
