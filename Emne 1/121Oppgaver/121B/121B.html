@@ -1,0 +1,71 @@
+<div id="app"></div>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 312px;
+    }
+
+    td,
+    th {
+        border: 1px solid #b2a6a6;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    th {
+        background-color: #04AA6D;
+        color: white;
+    }
+</style>
+<script>
+    //Model
+    const app = document.getElementById('app');
+    let dag = 1;
+    let time = 4;
+    let minutt = 5;
+    let temperatur = 17 + 'C&#176;';
+
+    //Veiw
+    updateVeiw();
+    function updateVeiw() {
+        app.innerHTML += /*HTML*/`
+        <table id="table">
+        <tr>
+            <th>Dag</th>
+            <th>Timer</th>
+            <th>Minutter</th>
+            <th>Temperaturen</th>
+            </tr>
+            <tr>
+                <td>${dag}</td>
+                <td>${time}</td>
+                <td>${minutt}</td>
+                <td>${temperatur}</td>
+            </tr>
+        </table>
+                <input id="dag" type="number" placeholder="Dag" style="width: 75px;">
+                <input id="timer" type="number" placeholder="Timer" style="width: 75px;;">
+                <input id="minutter" type="number" placeholder="Minutter" style="width: 75px;">
+                <input id="temp" type="number" placeholder="Temp" style="width: 75px;">
+                <button onclick="newDay();">Ny dag</button>
+                `;
+    };
+    //Controller
+    function newDay() {
+        dag = document.getElementById('dag').value;
+        time = document.getElementById('timer').value;
+        minutt = document.getElementById('minutter').value;
+        temperatur = document.getElementById('temp').value;
+
+        document.getElementById('table').innerHTML += /*HTML*/` 
+        <td>${dag}</td>
+        <td>${time}</td>
+        <td>${minutt}</td>
+        <td>${temperatur + ' C&#176;'}</td> 
+        </tr>
+        `;
+    };
+</script>
