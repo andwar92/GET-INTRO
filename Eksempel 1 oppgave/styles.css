@@ -1,0 +1,49 @@
+body {
+    margin-left: 20px;
+}
+
+#card {
+    width: 500px;
+    background-color: rgb(165, 158, 158);
+    border: 1px solid rgb(203, 202, 202);
+    margin: 5px;
+}
+.innerCard {
+    padding: 10px;
+}
+
+.Header {
+    width: 500px;
+    color: white;
+    text-align: center;
+    font-size: x-large;
+    padding: 1% 0;
+    border: 1px solid gray;
+    user-select: none;
+    
+}
+.Green {
+    background-color: green;
+    text-align: center;
+}
+
+.Blue {
+    background-color: rgb(0, 79, 128);
+}
+
+.Red {
+    background-color: rgb(246, 33, 65);
+}
+
+.Yellow {
+    background-color: rgb(235, 232, 25);
+}
+
+.Black {
+    background-color: rgb(18, 18, 18);
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 520px);
+    width: auto;
+}
