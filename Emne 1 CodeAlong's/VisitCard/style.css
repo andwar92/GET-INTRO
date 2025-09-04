@@ -1,0 +1,13 @@
+
+#app {
+    padding-left: 10px;
+    background-color: rgb(243, 158, 38);
+    width: 600px;
+    height: flex;
+    border: solid, rgb(80, 80, 80) 3px;
+    border-radius: 12px;
+    box-shadow: 3px 2px rgba(180, 177, 177, 0.2);
+    margin-left: 20px;
+    font-size: medium;
+    font-style: italic;
+};
